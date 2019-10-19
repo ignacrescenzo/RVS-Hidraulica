@@ -28,3 +28,5 @@ C:\ProyectoROLO\RVSHidraulica\RVSHidraulica\obj\Debug\netcoreapp2.2\RVSHidraulic
 C:\ProyectoROLO\RVSHidraulica\RVSHidraulica\obj\Debug\netcoreapp2.2\RVSHidraulica.dll
 C:\ProyectoROLO\RVSHidraulica\RVSHidraulica\obj\Debug\netcoreapp2.2\RVSHidraulica.pdb
 C:\ProyectoROLO\RVSHidraulica\RVSHidraulica\obj\Debug\netcoreapp2.2\RVSHidraulica.csproj.CopyComplete
+C:\ProyectoROLO\RVSHidraulica\RVSHidraulica\obj\Debug\netcoreapp2.2\Razor\Views\Servicios\Index.g.cshtml.cs
+C:\ProyectoROLO\RVSHidraulica\RVSHidraulica\obj\Debug\netcoreapp2.2\Razor\Views\Contacto\index.g.cshtml.cs

@@ -1,12 +1,13 @@
 ﻿/*color: #4A6751;*/
-a {
+header a {
     color: #fff;
     text-decoration: none;
     display: inline-block;
     padding: 15px 20px;
     position: relative;
 }
-li > a:after {    
+
+li > a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -14,20 +15,22 @@ li > a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: black;
+    background: #4A6751;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
 
-a:hover:after { 
-    width: 100%; 
-    left: 0; 
+a:hover:after {
+    width: 100%;
+    left: 0;
 }
+
 @media screen and (max-height: 300px) {
     ul {
         margin-top: 40px;
     }
 }
+
 .navbar {
     height: 6rem;
     -webkit-box-shadow: 0px 2px 3px 1px rgba(168,168,168,1);
@@ -35,25 +38,40 @@ a:hover:after {
     box-shadow: 0px 2px 3px 1px rgba(168,168,168,1);
     background: #DADAD4;
 }
+
 .navbar-brand img:first-child {
     width: 4rem;
 }
+
 .navbar-brand img:last-child {
     width: 6rem;
 }
+
 .nav-item a {
     font-size: 3.2vh;
     text-transform: uppercase;
 }
+
 *:not(i):not(em) {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
+    p,h1,h2,a,div{
+        color: #4A6751;
+    }
+
 footer {
-    height: 100px;
+    height: 130px;
     background: black;
     color: white;
 }
-.dropdown-menu { left: -77px; }
+
+    footer a, footer a:hover {
+        color: white;
+    }
+
+.dropdown-menu {
+    left: -77px;
+}
 
 body {
     background: #F0F0F0;
@@ -62,4 +80,7 @@ body {
 .dropdown-toggle::after {
     border: none;
     margin-left: 0;
+}
+footer div div i {
+    color: white !important;
 }

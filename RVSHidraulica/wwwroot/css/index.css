@@ -29,3 +29,19 @@
     font-size: 15px;
 }
 .slick-dots { bottom: -36px; }
+.gear-img {
+    height: 100px;
+    width: 100%;
+}
+p {
+    text-align: justify;
+    font-size: 3.4vh;
+}
+.deg {
+    background-image: url(../img/fondo.png);
+    height: 200px;
+    margin-top: 6rem;
+}
+.deg p {
+    font-size: 4.8vh;
+}
