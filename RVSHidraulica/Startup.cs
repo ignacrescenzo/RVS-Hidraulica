@@ -17,6 +17,8 @@ namespace RVSHidraulica
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            Helper.MailHelper.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }

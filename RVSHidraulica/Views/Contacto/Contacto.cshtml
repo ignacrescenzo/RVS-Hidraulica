@@ -3,6 +3,9 @@
     ViewData["Title"] = "Contacto";
     Layout = "_Layout";
 }
+<script>
+    var pathEnviarMensaje = '@Url.Action("EnviarMensaje")'
+</script>
 <link rel="stylesheet" href="@Url.Content("~/css/contacto.css")"/>
 <div class="mx-5 mt-5">
     <h1 class="text-center font-weight-bold">Contacto</h1>
@@ -31,15 +34,15 @@
             <form>
                 <div class="form-group">
                     <label>Nombre</label>
-                    <input type="text" placeholder="Ingrese su nombre" class="form-control" />
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Email  <i>(opcional)</i></label>
-                    <input type="email" placeholder="Ingrese su email" class="form-control" />
+                    <input type="email" id="email" placeholder="Ingrese su email" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Tipo de mensaje</label>
-                    <select class="form-control">
+                    <select class="form-control" id="tipoMensaje">
                         <option value="0" selected disabled>Seleccione el tipo de mensaje</option>
                         <option value="1">Consulta</option>
                         <option value="2">Sugerencia</option>
@@ -48,9 +51,9 @@
                 </div>
                 <div class="form-group">
                     <label>Mensaje</label>
-                    <textarea class="form-control" rows="5"></textarea>
+                    <textarea class="form-control" id="mensaje" rows="5"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary px-5 font-weight-bold">Enviar</button>
+                <button type="button" id="btnEnviar" class="btn btn-primary px-5 font-weight-bold">Enviar</button>
             </form>
         </div>
     </div>
@@ -60,3 +63,7 @@
     </div>
 </div>
 
+@section Scripts
+{
+    <script src="@Url.Content("~/js/contacto.js")"></script>
+}
