@@ -17,10 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Url.Content("~/css/estilos.css")" />
     <link rel="stylesheet" href="@Url.Content("~/lib/fontawesome-free-5.11.2-web/css/all.min.css")" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/alertify.min.css"/>
-    <!-- Default theme -->
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/css/themes/default.min.css"/>
+    <link rel="stylesheet" href="@Url.Content("~/lib/alertifyjs/css/alertify.min.css")"/>
+    <link rel="stylesheet" href="@Url.Content("~/lib/alertifyjs/css/themes/bootstrap.min.css")"/>
 </head>
 <body>
     <header>
@@ -45,11 +43,11 @@
                             Productos
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Bombas y motores hidráulicos</a>
+                            <a class="dropdown-item" href="@Url.Action("BombasYMotores","Productos")">Bombas y motores hidráulicos</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Cilindros hidráulicos</a>
+                            <a class="dropdown-item" href="@Url.Action("Cilindros","Productos")">Cilindros hidráulicos</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Mangueras y accesorios</a>
+                            <a class="dropdown-item" href="@Url.Action("ManguerasYAccesorios","Productos")">Mangueras y accesorios</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Accesorios hidráulicos</a>
                             <div class="dropdown-divider"></div>
@@ -87,6 +85,7 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="@Url.Content("~/lib/alertifyjs/alertify.min.js")"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -101,10 +100,10 @@
                 crossorigin="anonymous"
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
+        <script src="@Url.Content("~/lib/alertifyjs/alertify.min.js")"></script>
     </environment>
     <script src="@Url.Content("~/js/layout.js")"></script>
 <script src="@Url.Content("~/lib/fontawesome-free-5.11.2-web/js/all.min.js")"></script>
-<script src="http://cdn.jsdelivr.net/npm/alertifyjs@1.12.0/build/alertify.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html> 
