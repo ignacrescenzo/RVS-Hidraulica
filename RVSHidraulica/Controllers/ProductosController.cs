@@ -22,5 +22,10 @@ namespace RVSHidraulica.Controllers
         {
             return View();
         }
+
+        public IActionResult Valvulas()
+        {
+            return View();
+        }
     }
 }
