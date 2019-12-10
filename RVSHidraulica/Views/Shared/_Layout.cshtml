@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RVS Hidraulica</title>
+    <title>@ViewData["Title"]</title>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -14,62 +14,78 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Url.Content("~/css/estilos.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/lib/fontawesome-free-5.11.2-web/css/all.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/lib/alertifyjs/css/alertify.min.css")"/>
+    <link rel="stylesheet" href="@Url.Content("~/lib/alertifyjs/css/themes/bootstrap.min.css")"/>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light py-md-3">
-        <a class="navbar-brand" href="#">
-            <img alt="RVS" src="@Url.Content($"~/img/logo.png")"/>
-            <img alt="RVS Hidraulica" src="@Url.Content($"~/img/isotipo.png")"/>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active mr-5">
-                    <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item mr-5">
-                    <a class="nav-link" href="#">Servicios</a>
-                </li>
-                <li class="nav-item dropdown mr-5">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Productos
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Bombas y motores hidráulicos</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Cilindros hidráulicos</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Mangueras y accesorios</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Accesorios hidráulicos</a>
-                    </div>
-                </li>
-                <li class="nav-item mr-5">
-                    <a class="nav-link" href="#" tabindex="-1">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-    <div class="">
-        <main role="main">
-            @RenderBody()
-        </main>
-    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-md-3">
+            <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                <img alt="RVS" src="@Url.Content($"~/img/logo.png")" />
+                <img alt="RVS Hidraulica" src="@Url.Content($"~/img/isotipo.png")" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">Inicio</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="@Url.Action("Index","Servicios")">Servicios</a>
+                    </li>
+                    <li class="nav-item dropdown mr-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("BombasYMotores","Productos")">Bombas y motores hidráulicos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="@Url.Action("Cilindros","Productos")">Cilindros hidráulicos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="@Url.Action("ManguerasYAccesorios","Productos")">Mangueras y accesorios</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Accesorios hidráulicos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="@Url.Action("Valvulas","Productos")">Válvulas direccionales y de control</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="@Url.Action("Index","Contacto")" tabindex="-1">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<div class="">
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
 <footer class="d-flex justify-content-around align-items-center mt-5">
-        <div>Teléfono</div>
-        <div>Email</div>
-        <div>Dirección</div>
-</footer>
+        <div class="d-flex flex-column text-center">
+            <div class="text-white"><i class="fas fa-phone mr-2 text-white"></i> Teléfono</div>
+            <span class="text-white">15-6369-5476</span>
+            <span class="text-white">2137-1561</span>
+        </div>
+        <div class="d-flex flex-column text-center">
+            <div class="text-white"><i class="far fa-envelope mr-2 text-white"></i> Email</div>
+            <div><a href="mailto:rolando@rvshidraulica.com" class="text-white">rolando@rvshidraulica.com</a></div>
+        </div>
+        <div class="d-flex flex-column text-center">
+            <div class="text-white"><i class="fas fa-map-marker-alt mr-2 text-white"></i> Dirección</div>
+            <div class="text-white">Concejal Nicolás Defilippi 1253, Ituzaingó, Buenos Aires</div>
+        </div>
+    </footer>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="@Url.Content("~/lib/alertifyjs/alertify.min.js")"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -84,8 +100,10 @@
                 crossorigin="anonymous"
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
+        <script src="@Url.Content("~/lib/alertifyjs/alertify.min.js")"></script>
     </environment>
     <script src="@Url.Content("~/js/layout.js")"></script>
+<script src="@Url.Content("~/lib/fontawesome-free-5.11.2-web/js/all.min.js")"></script>
     @RenderSection("Scripts", required: false)
 </body>
-</html>
+</html> 
