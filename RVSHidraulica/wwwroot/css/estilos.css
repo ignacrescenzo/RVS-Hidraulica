@@ -89,3 +89,36 @@ footer div div i {
     -moz-box-shadow: 0px 0px 5px 2px rgba(184,184,184,1);
     box-shadow: 0px 0px 5px 2px rgba(184,184,184,1);
 }
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    footer {
+        height: 100%;
+        padding: 1rem 2rem;
+    }
+    .navbar-nav {
+        text-align: end;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 0 !important;
+        padding-right: 1rem;
+        border-bottom: 1px gray solid;
+    }
+    li > a:after {
+        background: none;
+    }
+    .navbar-collapse.collapse.show {
+        position: relative;
+        top: 1rem;
+        z-index: 999;
+        background: #F0F0F0;
+        -webkit-box-shadow: 0px 2px 3px 1px rgba(168,168,168,1);
+        -moz-box-shadow: 0px 2px 3px 1px rgba(168,168,168,1);
+        box-shadow: 0px 2px 3px 1px rgba(168,168,168,1);
+    }
+    .card img {
+        height: 100% !important;
+    }
+    .nav-item a {
+        font-size: 2.2vh;
+    }
+}
