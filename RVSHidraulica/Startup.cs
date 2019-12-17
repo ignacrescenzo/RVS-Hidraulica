@@ -18,7 +18,6 @@ namespace RVSHidraulica
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
             Helper.MailHelper.Configuration = configuration;
         }
 
@@ -37,13 +36,13 @@ namespace RVSHidraulica
 
             services.AddMvc(option => option.EnableEndpointRouting = false)
                 .SetCompatibilityVersion(CompatibilityVersion.Latest);
-            services.AddWebOptimizer(pipeline =>
-                {
-                    pipeline.AddCssBundle("/css/bundle.css", "css/*.css");
-                    pipeline.AddJavaScriptBundle("/js/bundle.js", "js/*.css");
-                }
+        //    services.AddWebOptimizer(pipeline =>
+        //        {
+        //            pipeline.AddCssBundle("/css/bundle.css", "css/*.css");
+        //            pipeline.AddJavaScriptBundle("/js/bundle.js", "js/*.css");
+        //        }
         
-        );
+        //);
     }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +60,7 @@ namespace RVSHidraulica
             }
 
             app.UseHttpsRedirection();
-            app.UseWebOptimizer();
+            //app.UseWebOptimizer();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
