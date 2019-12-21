@@ -14,12 +14,11 @@ btnEnviar.click(function() {
         alertify.message("Cargando...");
         $.ajax({
             url: window.pathEnviarMensaje,
-            data: JSON.stringify(obj),
+            data: obj,
             success: envioMensajeOk,
             type: "POST",
             error: envioMensajeError,
-            dataType: "json",
-            contentType: "application/json; charset=utf-8"
+            dataType: "json"
         });
     }
 });
