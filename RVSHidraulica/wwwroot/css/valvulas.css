@@ -1,3 +1,9 @@
-﻿.modulares {
+﻿.modulares,.hid-mov {
     background: #F9F9F9;
 }
+.card {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+

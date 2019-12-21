@@ -27,6 +27,7 @@ namespace RVSHidraulica.Controllers
         public JsonResult EnviarMensaje([FromBody] MensajeDto mensaje)
         {
             MailHelper.EnviarMail(mensaje.Nombre,mensaje.TipoMensaje,mensaje.Mensaje,mensaje.Email);
+
             return Json("");
         }
     }

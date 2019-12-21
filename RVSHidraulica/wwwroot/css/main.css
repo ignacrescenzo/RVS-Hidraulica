@@ -1,4 +1,10 @@
-﻿/*color: #4A6751;*/
+form button {
+    background: #4A6751 !important;
+    outline: #4A6751 !important;
+    border: #4A6751 !important;
+}
+
+/*color: #4A6751;*/
 header a {
     color: #fff;
     text-decoration: none;
@@ -122,3 +128,74 @@ footer div div i {
         font-size: 2.2vh;
     }
 }
+.carousel img {
+    margin: 0 auto;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #4A6751;
+}
+.carousel {
+    background: white;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(191,191,191,1);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(191,191,191,1);
+    box-shadow: 0px 0px 9px 0px rgba(191,191,191,1);
+}
+.slick-prev {
+    left: 10px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 35px;
+    z-index: 999;
+}
+
+    .slick-prev:before, .slick-next:before {
+        font-size: 45px;
+    }
+
+.slick-dots li button:before {
+    font-size: 15px;
+}
+.slick-dots { bottom: -36px; }
+.gear-img {
+    height: 100px;
+    width: 100%;
+}
+p {
+    text-align: justify;
+    font-size: 3.4vh;
+}
+.deg {
+    background-image: url(../img/fondo.png);
+    height: 200px;
+    margin-top: 6rem;
+    background-size: cover;
+}
+.deg p {
+    font-size: 4.8vh;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .deg p {
+        font-size: 3vh;
+        color: white;
+    }
+    .carousel img {
+        width: 100%;
+    }
+}
+.card img{
+    width: 100%;
+    height: 275px;
+}
+.modulares,.hid-mov {
+    background: #F9F9F9;
+}
+.card {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+

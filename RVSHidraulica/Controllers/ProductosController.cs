@@ -27,5 +27,10 @@ namespace RVSHidraulica.Controllers
         {
             return View();
         }
+
+        public IActionResult Accesorios()
+        {
+            return View();
+        }
     }
 }
