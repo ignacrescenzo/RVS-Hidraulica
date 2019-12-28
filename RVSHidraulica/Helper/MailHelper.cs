@@ -33,7 +33,7 @@ namespace RVSHidraulica.Helper
             var message = new MailMessage(Configuration.GetSection("EmailConfig:EmailConsultas").Value, Configuration.GetSection("EmailConfig:EmailDestino").Value);
             message.Subject = asunto;
             message.Body = mensaje;
-            SmtpClient mailer = new SmtpClient("smtp-mail.outlook.com", 587);
+            SmtpClient mailer = new SmtpClient("smtp.gmail.com", 587);
             mailer.Credentials = new NetworkCredential(Configuration.GetSection("EmailConfig:EmailConsultas").Value, Configuration.GetSection("EmailConfig:Password").Value);
             mailer.EnableSsl = true;
             mailer.Send(message);
