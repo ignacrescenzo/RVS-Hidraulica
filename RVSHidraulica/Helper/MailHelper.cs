@@ -34,6 +34,7 @@ namespace RVSHidraulica.Helper
             message.Subject = asunto;
             message.Body = mensaje;
             SmtpClient mailer = new SmtpClient("smtp.gmail.com", 587);
+            mailer.UseDefaultCredentials = false;
             mailer.Credentials = new NetworkCredential(Configuration.GetSection("EmailConfig:EmailConsultas").Value, Configuration.GetSection("EmailConfig:Password").Value);
             mailer.EnableSsl = true;
             mailer.Send(message);
